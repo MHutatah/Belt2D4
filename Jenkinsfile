@@ -7,9 +7,9 @@ pipeline {
 		AWS_ACCESS_KEY_ID     = credentials('MohammedAlghamdi-aws-secret-key-id')
   		AWS_SECRET_ACCESS_KEY = credentials('MohammedAlghamdi-aws-secret-access-key')
 		ARTIFACT_NAME = 'Dockerrun.aws.json'
-		AWS_S3_BUCKET = 'MohammedAlghamdi-Belt2-artifacts-123456'
+		AWS_S3_BUCKET = 'mohammedalghamdi-belt2-artifacts-123456'
 		AWS_EB_APP_NAME = 'MohammedAlghamdi-B2D4-Runaway'
-        AWS_EB_ENVIRONMENT_NAME = 'MohammedAlghamdi-B2D4-Runaway-env'
+        AWS_EB_ENVIRONMENT_NAME = 'Mohammedalghamdib2d4runaway-env'
         AWS_EB_APP_VERSION = "${BUILD_ID}"
 	}
 
@@ -18,7 +18,7 @@ pipeline {
 		stage('Build') {
 
 			steps {
-				sh 'docker build -t chandradeoarya/dojo-jump:latest .'
+				sh 'docker build -t mhutatah/mohammedalghamdi-runaway-game:latest .'
 			}
 		}
 
@@ -32,7 +32,7 @@ pipeline {
 		stage('Push') {
 
 			steps {
-				sh 'docker push chandradeoarya/dojo-jump:latest'
+				sh 'docker push mhutatah/mohammedalghamdi-runaway-game:latest'
 			}
 		}
 
