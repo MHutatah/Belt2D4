@@ -1,0 +1,11 @@
+{
+    "AWSEBDockerrunVersion": "1",
+    "Image": {
+      "Name": "registry.hub.docker.com/mhutatah/mohammedalghamdi-runaway-game:latest"
+    },
+    "Ports": [
+      {
+        "ContainerPort": 80
+      }
+    ]
+}
